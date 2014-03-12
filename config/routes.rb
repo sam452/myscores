@@ -1,12 +1,12 @@
-Sti::Application.routes.draw do
+MyScores::Application.routes.draw do
 
-  resources :animals
-  resources :lions, controller: 'animals', type: 'Lion'
-  resources :meerkats, controller: 'animals', type: 'Meerkat'
-  resources :wild_boars, controller: 'animals', type: 'WildBoar'
+  resources :scores
+  resources :videos, controller: 'scores', type: 'Video'
+  resources :voids, controller: 'scores', type: 'Voids'
+  resources :no_sales, controller: 'scores', type: 'NoSale'
 
 
-  root 'animals#index'
+  root 'scores#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

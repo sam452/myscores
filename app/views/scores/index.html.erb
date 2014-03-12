@@ -1,0 +1,29 @@
+<h1>The Video Inspection</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Age</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @scores.each do |score| %>
+      <tr>
+        <td><%= score.name %></td>
+        <td><%= score.type %></td>
+        <td><%= score.age %></td>
+        <td><%= link_to 'Show', sti_score_path(score.type, score) %></td>
+        <td><%= link_to 'Edit', sti_score_path(score.type, score, :edit) %></td>
+        <td><%= link_to 'Destroy', sti_score_path(score.type, score), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to "See all #{score.type.pluralize}", sti_score_path(score.type) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to "New #{@type}", sti_score_path(@type, nil, :new) %>
+<%= link_to 'See all scores', sti_score_path %>

@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-Sti::Application.config.secret_key_base = '5d904acf046490dbdcef14cdd2052526d9265a65b76eb54b481c707b2bc9895b3a2a1c5f6b36823d3377913fe8233dfbde2917b28aeece7cda7bbac4eb47f733'
+MyScores::Application.config.secret_key_base = '5d904acf046490dbdcef14cdd2052526d9265a65b76eb54b481c707b2bc9895b3a2a1c5f6b36823d3377913fe8233dfbde2917b28aeece7cda7bbac4eb47f733'
